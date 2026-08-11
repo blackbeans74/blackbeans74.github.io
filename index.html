@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的超级建筑服 - 官方网站</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+
+        .hero {
+            background: linear-gradient(135deg, #2c3e50, #000000);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid #4CAF50;
+        }
+        .hero h1 {
+            font-size: 3rem; margin: 0; color: #4CAF50;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+        .hero p { font-size: 1.2rem; color: #bbb; margin-top: 10px; }
+
+        .ip-box {
+            background: rgba(255, 255, 255, 0.1); display: inline-block;
+            padding: 15px 30px; border-radius: 8px; margin-top: 20px;
+            border: 1px solid #4CAF50; cursor: pointer; transition: all 0.3s;
+        }
+        .ip-box:hover { background: rgba(76, 175, 80, 0.2); transform: scale(1.05); }
+        .ip-text { font-size: 1.5rem; font-weight: bold; color: #fff; letter-spacing: 1px; }
+        .copy-hint { font-size: 0.9rem; color: #aaa; display: block; margin-top: 5px; }
+
+        .qq-btn {
+            display: inline-block; margin-top: 20px; padding: 10px 25px;
+            background-color: #12B7F5; color: white; border-radius: 50px;
+            font-weight: bold; box-shadow: 0 4px 15px rgba(18, 183, 245, 0.4); transition: transform 0.2s;
+            cursor: pointer; border: none; font-size: 1rem;
+        }
+        .qq-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(18, 183, 245, 0.6); }
+
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .section-title {
+            text-align: center; font-size: 2rem; margin-bottom: 30px;
+            position: relative; display: inline-block; left: 50%; transform: translateX(-50%);
+        }
+        .section-title::after {
+            content: ''; display: block; width: 60%; height: 3px;
+            background: #4CAF50; margin: 10px auto 0;
+        }
+
+        .version-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
+        }
+
+        .version-card {
+            background: #252525; border-radius: 10px; padding: 20px;
+            border-left: 5px solid #555; transition: all 0.3s ease;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .version-card:hover { transform: translateY(-5px); background: #2a2a2a; }
+
+        .v-new { border-left-color: #FFD700; }
+        .v-hot { border-left-color: #FF5722; }
+
+        .ver-num { font-size: 1.8rem; font-weight: bold; color: #fff; margin-bottom: 5px; }
+        .ver-desc { font-size: 0.9rem; color: #888; margin-bottom: 15px; }
+
+        .download-link {
+            display: block; text-align: center; padding: 10px;
+            background: #333; color: #fff; border-radius: 5px;
+            font-weight: bold; transition: background 0.2s;
+        }
+        .download-link:hover { background: #4CAF50; color: #fff; }
+
+        .rules {
+            text-align: center; margin: 40px auto; max-width: 600px;
+            padding: 20px; background: rgba(255,255,255,0.05); border-radius: 10px;
+        }
+        .rules h3 { color: #ff5555; margin-top: 0; font-size: 1.5rem; }
+        .rules p { font-size: 1.2rem; color: #ddd; margin: 0; }
+
+        footer {
+            text-align: center; padding: 40px; color: #666;
+            font-size: 0.9rem; border-top: 1px solid #333; margin-top: 50px;
+        }
+
+        /* --- 右下角迷你伪装入口 --- */
+        .mini-link {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.7rem;
+            color: #555;
+            text-decoration: none;
+            z-index: 1000;
+            transition: color 0.2s;
+        }
+        .mini-link:hover {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>我的超级建筑服</h1>
+        <p>全版本兼容 · 纯净生存 · 创意建筑</p>
+
+        <div class="ip-box" onclick="copyText('Minter-XVqo.aternos.me:62833')">
+            <span class="ip-text">Minter-XVqo.aternos.me:62833</span>
+            <span class="copy-hint" id="ip-msg">👆 点击复制 IP 地址</span>
+        </div>
+
+        <br>
+        <button class="qq-btn" onclick="copyQQ()">💬 一键复制QQ群号: 1923620953</button>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">📦 启动器与客户端下载</h2>
+        
+        <div class="version-grid">
+            <div class="version-card v-new">
+                <div>
+                    <div class="ver-num">PCL2 启动器</div>
+                    <div class="ver-desc">✨ 极简高效 | 新手最爱<br>一键下载全版本，支持自动安装</div>
+                </div>
+                <a href="https://pcl.ruanmao.net/" target="_blank" class="download-link">⬇️ 前往 PCL2 官网下载</a>
+            </div>
+
+            <div class="version-card v-hot">
+                <div>
+                    <div class="ver-num">HMCL 启动器</div>
+                    <div class="ver-desc">🔥 功能强大 | 跨平台支持<br>老牌启动器，稳定可靠</div>
+                </div>
+                <a href="https://hmcl.huangyuhui.net/" target="_blank" class="download-link">⬇️ 前往 HMCL 官网下载</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="rules">
+        <h3>⚠️ 服务器唯一规则</h3>
+        <p>未经允许，禁止破坏建筑</p>
+    </div>
+
+    <footer>
+        &copy; 2024 我的超级建筑服 - Powered by Aternos & HuggingFace
+    </footer>
+
+    <!-- 伪装入口：表面是欢迎游玩，实际是水影官网 -->
+    <a href="https://liquidbounce.net/" target="_blank" class="mini-link">欢迎游玩</a>
+
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                var msg = document.getElementById("ip-msg");
+                msg.innerText = "✅ IP复制成功！快去游戏里添加吧";
+                msg.style.color = "#4CAF50";
+                setTimeout(function(){ 
+                    msg.innerText = "👆 点击复制 IP 地址"; 
+                    msg.style.color = "#aaa";
+                }, 3000);
+            });
+        }
+
+        function copyQQ() {
+            navigator.clipboard.writeText("1923620953").then(function() {
+                alert("✅ QQ群号 1923620953 已复制！\n快去QQ搜索加群吧~");
+            }).catch(function() {
+                alert("复制失败，请手动加群：1923620953");
+            });
+        }
+    </script>
+
+</body>
+</html>
